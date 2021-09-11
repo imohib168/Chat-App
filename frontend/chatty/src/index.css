@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+button {
+  font-size: larger;
+  margin-left: 15px;
+}
+
+form {
+  background-color: transparent;
+  display: flex;
+  width: 100vw;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  z-index: 50;
+}
+
+input {
+  flex-grow: 1;
+}
+
+.receiver span,
+.sender span {
+  padding: 2px;
+  background: transparent;
+  display: block;
+  font-size: 14px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.sender span {
+  text-align: right;
+}
+
+.receiver p,
+.sender p {
+  background-color: lightgreen;
+  /* margin: 0; */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.sender p {
+  background-color: lightgray;
+}
+
+.receiver,
+.sender {
+  color: rgb(90, 88, 88);
+  background-color: rgb(207, 205, 205);
+  margin: auto auto 15px 15px;
+  padding: 3px 5px;
+  min-width: 5rem;
+  max-width: 30rem;
+  text-align: left;
+  flex-direction: column;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.sender {
+  margin: auto 15px 15px auto;
+  text-align: right;
+}
