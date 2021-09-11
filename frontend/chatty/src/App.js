@@ -4,14 +4,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import socket from 'socket.io-client';
 import { nanoid } from 'nanoid';
 
-// import { css } from 'emotion';
-// import ScrollToBottom from 'react-scroll-to-bottom';
-
-// const ROOT_CSS = {
-//   height: 600,
-//   width: 400
-// }
-
 // const socket = io.connect('http://localhost:5000');
 
 const userName = nanoid(4);
