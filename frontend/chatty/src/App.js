@@ -67,6 +67,7 @@ function App() {
             type="text"
             name="chat"
             placeholder="send text"
+            autocomplete="off"
             value={message}
             onChange={e => setMessage(e.target.value)}
           />
