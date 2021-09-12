@@ -72,9 +72,9 @@ input:focus {
   font-weight: 600;
 }
 
-.sender span {
+/* .sender span {
   text-align: right;
-}
+} */
 
 .receiver p,
 .sender p {
@@ -95,10 +95,19 @@ input:focus {
   padding: 3px 5px;
   min-width: 4rem;
   width: fit-content;
-  max-width: 15rem;
+  max-width: 30rem;
   text-align: left;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 900px) {
+  .receiver,
+  .sender {
+    width: fit-content;
+    max-width: 15rem;
+  }
+}
+
 .sender {
   margin: auto 15px 15px auto;
   background-color: transparent;
