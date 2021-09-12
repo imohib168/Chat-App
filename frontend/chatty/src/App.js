@@ -31,7 +31,7 @@ function App() {
   }
 
   useEffect(() => {
-    const client = socket("http://localhost:5000");
+    const client = socket("https://chat-socket-ser.herokuapp.com/");
     client.on("chat", message => {
       setChat(prevChats => [...prevChats, message])
     });
