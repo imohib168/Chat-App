@@ -93,4 +93,14 @@ input:focus {
 
 .btnSend {
   margin-right: 8px;
+  font-size: 25px;
+  background: transparent;
+  padding: 6px;
+  border-radius: 100%;
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }

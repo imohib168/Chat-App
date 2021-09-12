@@ -68,7 +68,9 @@ function App() {
             onChange={e => setMessage(e.target.value)}
           />
 
-          <AiOutlineSend className="btnSend" type="submit" />
+          <button className="btnSend" type="submit">
+            <AiOutlineSend />
+          </button>
         </form>
       </header>
     </div>
