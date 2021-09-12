@@ -13,14 +13,23 @@ body {
   overflow-x: hidden;
 }
 
-button {
-  font-size: larger;
-  margin-left: 15px;
+.heading {
+  /* margin-bottom: 40px; */
+  font-size: 17px;
+  text-align: left;
+  background-color: #3e363f;
+  padding: 10px 0px 12px 15px;
+  color: rgb(207, 205, 205);
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  width: 100%;
 }
 
 form {
-  background-color: transparent;
+  background-color: #3e363f;
   display: flex;
+  align-items: center;
   width: 100vw;
   padding: 10px;
   position: fixed;
@@ -29,17 +38,24 @@ form {
 }
 
 input {
+  background-color: transparent;
+  border: none;
+  padding: 4px 10px;
+  font-size: 18px;
   flex-grow: 1;
+  color: white;
+}
+
+input:focus {
+  outline: none;
 }
 
 .receiver span,
 .sender span {
   padding: 2px;
-  background: transparent;
-  display: block;
   font-size: 14px;
   text-align: left;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .sender span {
@@ -48,31 +64,33 @@ input {
 
 .receiver p,
 .sender p {
-  background-color: lightgreen;
-  /* margin: 0; */
+  background-color: #df5f5a;
   padding: 5px 10px;
   border-radius: 5px;
+  word-wrap: break-word;
 }
 .sender p {
-  background-color: lightgray;
+  background-color: #df5f5a;
 }
 
 .receiver,
 .sender {
-  color: rgb(90, 88, 88);
-  background-color: rgb(207, 205, 205);
+  color: #fffce8;
+  background-color: #7c7b7c;
   margin: auto auto 15px 15px;
   padding: 3px 5px;
-  min-width: 5rem;
-  max-width: 30rem;
+  min-width: 4rem;
+  width: fit-content;
+  max-width: 15rem;
   text-align: left;
-  flex-direction: column;
   border-radius: 5px;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
 }
 .sender {
   margin: auto 15px 15px auto;
+  background-color: transparent;
   text-align: right;
+}
+
+.btnSend {
+  margin-right: 8px;
 }

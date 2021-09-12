@@ -3,6 +3,7 @@ import './App.css'
 import React, { useState, useEffect, useRef } from 'react';
 import socket from 'socket.io-client';
 import { nanoid } from 'nanoid';
+import { AiOutlineSend } from 'react-icons/ai';
 
 // const socket = io.connect('http://localhost:5000');
 
@@ -11,10 +12,20 @@ const userName = nanoid(4);
 function App() {
   const [message, setMessage] = useState('');
   const [chat, setChat] = useState([]);
-  const socketClientRef = useRef();
+  const socketClientRef = useRef(null);
+  const messagesEndRef = useRef(null)
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+  }
+
+  useEffect(() => {
+    scrollToBottom()
+  }, [chat]);
 
   const sendChat = (e) => {
     e.preventDefault();
+    if (!message.length) return;
     socketClientRef.current.emit("chat", { message, userName })
     setMessage('');
   }
@@ -33,12 +44,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Chatty App</h1>
+        <h1 className="heading">Chatty App</h1>
 
         {chat && chat.map((payload, index) => {
           return (
             <>
-              <div className={`${userName === payload.userName ? 'sender' : 'receiver'}`}>
+              <div ref={messagesEndRef} className={`${userName === payload.userName ? 'sender' : 'receiver'}`}>
                 <p key={index}>{payload.message}</p>
                 {userName !== payload.userName && (
                   <span>{payload.userName}</span>
@@ -57,7 +68,7 @@ function App() {
             onChange={e => setMessage(e.target.value)}
           />
 
-          <button disabled={!message} type="submit">Send</button>
+          <AiOutlineSend className="btnSend" disabled={!message} type="submit" />
         </form>
       </header>
     </div>
