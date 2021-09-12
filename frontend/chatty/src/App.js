@@ -44,7 +44,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="heading">Chatty App</h1>
+        <div className="header">
+          <h1 className="heading">Chatty App</h1>
+          <p>{userName}</p>
+        </div>
 
         {chat && chat.map((payload, index) => {
           return (
