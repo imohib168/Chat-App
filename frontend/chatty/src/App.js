@@ -68,7 +68,7 @@ function App() {
             onChange={e => setMessage(e.target.value)}
           />
 
-          <AiOutlineSend className="btnSend" disabled={!message} type="submit" />
+          <AiOutlineSend className="btnSend" type="submit" />
         </form>
       </header>
     </div>
